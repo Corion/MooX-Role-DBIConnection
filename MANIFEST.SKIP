@@ -24,3 +24,4 @@ Makefile$
 ^MooX-Role-DBIConnection
 ^frame-\d+.png
 ^demo/
+^.prove
