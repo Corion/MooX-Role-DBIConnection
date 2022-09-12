@@ -1,0 +1,67 @@
+
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/Corion/MooX-Role-DBIConnection?branch=master&svg=true)](https://ci.appveyor.com/project/Corion/MooX-Role-DBIConnection)
+[![Windows](https://github.com/Corion/MooX-Role-DBIConnection/workflows/windows/badge.svg)](https://github.com/Corion/MooX-Role-DBIConnection/actions?query=workflow%3Awindows)
+[![MacOS](https://github.com/Corion/MooX-Role-DBIConnection/workflows/macos/badge.svg)](https://github.com/Corion/MooX-Role-DBIConnection/actions?query=workflow%3Amacos)
+[![Linux](https://github.com/Corion/MooX-Role-DBIConnection/workflows/linux/badge.svg)](https://github.com/Corion/MooX-Role-DBIConnection/actions?query=workflow%3Alinux)
+
+# NAME
+
+MooX::Role::DBIConnection - handy mixin for objects with a DB connection
+
+# SYNOPSIS
+
+    { package My::Example;
+      use Moo 2;
+      with 'MooX::Role::DBIConnection';
+    };
+
+    # Connect using the parameters
+    my $writer = My::Example->new(
+        dbh => {
+            dsn  => '...',
+            user => '...',
+            password => '...',
+            options => '...',
+        },
+    );
+
+    # ... or alternatively if you have a connection already
+    my $writer2 = My::Example->new(
+        dbh => $dbh,
+    );
+
+This module enhances your class constructor by allowing you to pass in either
+a premade `dbh` or the parameters needed to create one.
+
+It will create the `dbh` accessor
+
+# NOTE
+
+This module will likely be spun out of the Weather::MOSMIX distribution
+
+# REPOSITORY
+
+The public repository of this module is
+[https://github.com/Corion/weather-mosmix](https://github.com/Corion/weather-mosmix).
+
+# SUPPORT
+
+The public support forum of this module is [https://perlmonks.org/](https://perlmonks.org/).
+
+# BUG TRACKER
+
+Please report bugs in this module via the RT CPAN bug queue at
+[https://rt.cpan.org/Public/Dist/Display.html?Name=Weather-MOSMIX](https://rt.cpan.org/Public/Dist/Display.html?Name=Weather-MOSMIX)
+or via mail to [www-Weather-MOSMIX@rt.cpan.org](mailto:Weather-MOSMIX@rt.cpan.org).
+
+# AUTHOR
+
+Max Maischein `corion@cpan.org`
+
+# COPYRIGHT (c)
+
+Copyright 2019-2020 by Max Maischein `corion@cpan.org`.
+
+# LICENSE
+
+This module is released under the same terms as Perl itself.
