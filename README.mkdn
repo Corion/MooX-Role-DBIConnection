@@ -33,16 +33,13 @@ MooX::Role::DBIConnection - handy mixin for objects with a DB connection
 This module enhances your class constructor by allowing you to pass in either
 a premade `dbh` or the parameters needed to create one.
 
-It will create the `dbh` accessor
-
-# NOTE
-
-This module will likely be spun out of the Weather::MOSMIX distribution
+The `dbh` method will then return either the passed-in database handle or
+try a connection to the database at the first use.
 
 # REPOSITORY
 
 The public repository of this module is
-[https://github.com/Corion/weather-mosmix](https://github.com/Corion/weather-mosmix).
+[https://github.com/Corion/MooX-Role-DBIConnection](https://github.com/Corion/MooX-Role-DBIConnection).
 
 # SUPPORT
 
@@ -51,8 +48,8 @@ The public support forum of this module is [https://perlmonks.org/](https://perl
 # BUG TRACKER
 
 Please report bugs in this module via the RT CPAN bug queue at
-[https://rt.cpan.org/Public/Dist/Display.html?Name=Weather-MOSMIX](https://rt.cpan.org/Public/Dist/Display.html?Name=Weather-MOSMIX)
-or via mail to [www-Weather-MOSMIX@rt.cpan.org](mailto:Weather-MOSMIX@rt.cpan.org).
+[https://rt.cpan.org/Public/Dist/Display.html?Name=MooX-Role-DBIConnection](https://rt.cpan.org/Public/Dist/Display.html?Name=MooX-Role-DBIConnection)
+or via mail to [MooX-Role-DBIConnection@rt.cpan.org](mailto:MooX-Role-DBIConnection@rt.cpan.org).
 
 # AUTHOR
 
