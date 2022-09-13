@@ -5,7 +5,7 @@ use feature 'signatures';
 no warnings 'experimental::signatures';
 use DBI;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -68,6 +68,8 @@ parameter used in the call to C<< DBI->connect(...) >>.
 
 Whether to connect to the database immediately or upon the first call to the
 the C<< ->dbh >>. The default is to make the connection lazily on first use.
+
+=back
 
 =cut
 

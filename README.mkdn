@@ -15,7 +15,7 @@ MooX::Role::DBIConnection - handy mixin for objects with a DB connection
       with 'MooX::Role::DBIConnection';
     };
 
-    # Connect using the parameters
+    # Lazily connect using the parameters
     my $writer = My::Example->new(
         dbh => {
             dsn  => '...',
@@ -35,6 +35,34 @@ a premade `dbh` or the parameters needed to create one.
 
 The `dbh` method will then return either the passed-in database handle or
 try a connection to the database at the first use.
+
+# OPTIONS
+
+The following options can be passed in the hashref to specify
+
+- **dsn**
+
+    [DBI](https://metacpan.org/pod/DBI) dsn to connect to
+
+- **user**
+
+    Database user to use when connecting to the database. This is the second
+    parameter used in the call to `DBI->connect(...)`.
+
+- **password**
+
+    Database password to use when connecting to the database. This is the third
+    parameter used in the call to `DBI->connect(...)`.
+
+- **options**
+
+    Database options to use when connecting to the database. This is the fourth
+    parameter used in the call to `DBI->connect(...)`.
+
+- **eager**
+
+    Whether to connect to the database immediately or upon the first call to the
+    the `->dbh`. The default is to make the connection lazily on first use.
 
 # REPOSITORY
 
