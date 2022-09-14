@@ -3,7 +3,8 @@
 use strict;
 use Test::More tests => 3;
 
-package My::Package {
+{
+package My::Package;
     use Moo;
     with 'MooX::Role::DBIConnection';
 }
