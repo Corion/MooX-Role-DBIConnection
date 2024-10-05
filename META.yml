@@ -19,13 +19,9 @@ no_index:
     - t
     - inc
 requires:
-  Carp: '0'
   DBI: '0'
-  Exporter: '5'
-  File::Spec: '0'
   Moo: '2'
   experimental: '0.032'
-  POSIX: '0'
   perl: '5.020'
 resources:
   bugtracker: https://github.com/Corion/MooX-Role-DBIConnection/issues

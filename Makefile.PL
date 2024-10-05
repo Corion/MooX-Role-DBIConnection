@@ -50,11 +50,7 @@ my %module = (
     },
 
     PREREQ_PM => {
-        'Exporter'           => 5, # for 'import'
-        'POSIX'              => 0, # for 'setsid' on POSIXish systems
-        'File::Spec'         => 0,
-
-        'Carp'               => 0,
+        'experimental'       => "0.032",
         'Moo'                => 2, # for some hashes-as-objects
         'DBI'                => 0,
     },
