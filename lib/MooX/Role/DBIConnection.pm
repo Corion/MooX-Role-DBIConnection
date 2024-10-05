@@ -1,4 +1,4 @@
-package MooX::Role::DBIConnection 0.05;
+package MooX::Role::DBIConnection 0.06;
 use 5.020;
 use experimental 'signatures';
 use Moo::Role;
