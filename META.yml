@@ -24,6 +24,7 @@ requires:
   Exporter: '5'
   File::Spec: '0'
   Moo: '2'
+  experimental: '0.032'
   POSIX: '0'
   perl: '5.020'
 resources:

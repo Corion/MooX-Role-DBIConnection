@@ -1,8 +1,7 @@
 package MooX::Role::DBIConnection;
 use 5.020;
+use experimental 'signatures';
 use Moo::Role;
-use feature 'signatures';
-no warnings 'experimental::signatures';
 use DBI;
 
 our $VERSION = '0.05';
