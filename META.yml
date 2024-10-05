@@ -23,10 +23,9 @@ requires:
   DBI: '0'
   Exporter: '5'
   File::Spec: '0'
-  Filter::signatures: '0.09'
   Moo: '2'
   POSIX: '0'
-  perl: '5.010'
+  perl: '5.020'
 resources:
   bugtracker: https://github.com/Corion/MooX-Role-DBIConnection/issues
   license: https://dev.perl.org/licenses/

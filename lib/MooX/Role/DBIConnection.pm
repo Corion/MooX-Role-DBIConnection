@@ -1,6 +1,6 @@
 package MooX::Role::DBIConnection;
+use 5.020;
 use Moo::Role;
-use Filter::signatures;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 use DBI;
