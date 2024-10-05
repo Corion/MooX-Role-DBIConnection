@@ -1,10 +1,8 @@
-package MooX::Role::DBIConnection;
+package MooX::Role::DBIConnection 0.05;
 use 5.020;
 use experimental 'signatures';
 use Moo::Role;
 use DBI;
-
-our $VERSION = '0.05';
 
 =head1 NAME
 
