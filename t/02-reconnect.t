@@ -1,7 +1,6 @@
 #!perl
-
 use strict;
-use Test::More tests => 2;
+use Test2::V0 '-no_srand';
 
 {
 package My::Package;
@@ -21,3 +20,5 @@ ok defined $old_dbh, 'dbh was created';
 
 $t->reconnect;
 ok $old_dbh != $t->dbh, "We created a fresh dbh on reconnect";
+
+done_testing();
