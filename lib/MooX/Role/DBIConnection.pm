@@ -86,10 +86,36 @@ sub _connect_db( $self, $dbh ) {
     return $dbh
 }
 
+=head1 METHODS
+
+The following methods are mixed in through this role:
+
+=head2 C<< ->dbh >>
+
+  my $dbh = $self->dbh;
+
+Connects to the database if needed and returns the database handle
+
+=cut
 
 sub dbh( $self ) {
     return $self->{_dbh} //= $self->_connect_db( $self->{_dbh_options} );
 }
+
+=head2 C<< ->reconnect_dbh >>
+
+  if( my $child = fork ) {
+      ...
+  } else {
+      # in child process
+      # We need a fresh database connection
+      $self->reconnect_dbh;
+  }
+
+Opens a new database connection. If an old connection existed, it is
+not closed.
+
+=cut
 
 sub reconnect_dbh( $self, $options = $self->{_dbh_options} ) {
     $self->{_dbh} = $self->_connect_db( $options )
