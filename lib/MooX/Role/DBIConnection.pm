@@ -74,7 +74,7 @@ sub BUILD( $self, $args ) {
     if( my $_dbh = delete $args->{dbh}) {
         $self->{_dbh_options} = $_dbh;
         if(ref $_dbh eq 'HASH' && $_dbh->{eager}) {
-            $self->reconnect( $_dbh );
+            $self->reconnect_dbh( $_dbh );
         };
     }
 };
@@ -86,12 +86,13 @@ sub _connect_db( $self, $dbh ) {
     return $dbh
 }
 
-sub reconnect( $self, $options = $self->{_dbh_options} ) {
-    $self->{_dbh} = $self->_connect_db( $options )
-}
 
 sub dbh( $self ) {
     return $self->{_dbh} //= $self->_connect_db( $self->{_dbh_options} );
+}
+
+sub reconnect_dbh( $self, $options = $self->{_dbh_options} ) {
+    $self->{_dbh} = $self->_connect_db( $options )
 }
 
 1;
